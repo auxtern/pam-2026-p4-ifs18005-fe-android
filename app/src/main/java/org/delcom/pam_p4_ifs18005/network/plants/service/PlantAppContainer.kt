@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit
 class PlantAppContainer: IPlantAppContainer {
     private val loggingInterceptor = HttpLoggingInterceptor().apply {
         level = if (BuildConfig.DEBUG) {
-            HttpLoggingInterceptor.Level.BASIC
+            HttpLoggingInterceptor.Level.BODY
         } else {
             HttpLoggingInterceptor.Level.NONE
         }
